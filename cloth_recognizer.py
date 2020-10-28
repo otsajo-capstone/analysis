@@ -11,8 +11,6 @@ session = InteractiveSession(config=config)
 
 f = "1093058_6_500.jpg"
 
-
-
 saved = load_model("save_ckp_frozen.h5")
 
 
@@ -50,7 +48,8 @@ class fashion_tools(object):
 
 
 ###running code
-def cloth_recognizer():
-    api    = fashion_tools(f,saved)
-    image_ = api.get_dress(True)
-    cv2.imwrite("out.png",image_)
+def cloth_recognizer(filename):
+    api = fashion_tools(f, saved)
+    image_ = api.get_dress()
+    filename_ = str(filename) + "_cloth.png"
+    cv2.imwrite(filename_, image_)

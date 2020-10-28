@@ -2,6 +2,7 @@ from flask import Flask, request
 from scrap import scrap_by_bs, scrap_by_selenium
 import requests
 import json
+from datetime import datetime
 from cloth_recognizer import cloth_recognizer
 
 app = Flask(__name__)
@@ -23,7 +24,9 @@ def scraper():
             if len(result) == 0:
                 return {'status': 'scrap failed'}
 
-        cloth_recognizer()
+        now = datetime.now()
+        filename = now.strftime("%Y%m%d_%H_%M_%S")
+        cloth_recognizer(filename)
 
         return {'status': 'success', 'image_urls': list(result)}
 
