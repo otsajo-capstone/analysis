@@ -6,3 +6,4 @@ pip install
 - image
 - opencv-python
 - tensorflow
+- scikit-learn

@@ -4,12 +4,28 @@ import requests
 import json
 from datetime import datetime
 from cloth_recognizer import cloth_recognizer
+from color_analyzer import color_analyzer
 
 app = Flask(__name__)
 
 '''
 POST로 scrap할 url을 받으면, 이미지 src를 배열 형태로 반환합니다.
 '''
+@app.route('/analyze', methods=['GET'])
+def test():
+    original = "233356.png"
+
+    try:
+        now = datetime.now()
+        filename = now.strftime("%Y%m%d_%H_%M_%S")
+        cloth = cloth_recognizer(original, filename)
+        color = color_analyzer(cloth)
+
+        return {'color': color}
+
+    except Exception as e:
+        return {'error': str(e)}
+
 @app.route('/url', methods=['POST'] )
 def scraper():
     try:
@@ -34,7 +50,7 @@ def scraper():
         return {'error': str(e)}
 
 @app.route('/url/select', methods=['POST'])
-def selecter():
+def selector():
     try:
         url = request.form['url']
         min_width = int(request.form['width'])
