@@ -10,6 +10,7 @@ from color_analyzer import color_analyzer
 app = Flask(__name__)
 dir_original = os.path.join(os.getcwd(), "original")
 
+
 @app.route('/test_analyze', methods=['GET'])
 def test():
     original = "233356.png"
@@ -24,6 +25,7 @@ def test():
 
     except Exception as e:
         return {'error': str(e)}
+
 
 @app.route('/image/analyze', methods=['POST'])
 def analyze_uploaded():
@@ -42,19 +44,24 @@ def analyze_uploaded():
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            analysis_result.append({'src': path, 'colors': str(colors)})
+            analysis_result.append({'src': path, 'colors': list(colors)})
 
-        return {'status': 'success', 'analysis_result': json.dumps(analysis_result)}
+        return {'status': 'success', 'analysis_result': list(analysis_result)}
 
     except Exception as e:
         return {'error': str(e)}
 
-@app.route('/url', methods=['POST'] )
+
+@app.route('/url', methods=['POST'])
 def scraper():
     try:
         url = request.form['url']
-        min_width = int(request.form['width'])
-        min_height = int(request.form['height'])
+        min_width = 150
+        min_height = 150
+        if request.form['width']:
+            min_width = int(request.form['width'])
+        if request.form['height']:
+            min_height = int(request.form['height'])
 
         result = scrap_by_bs(url, min_width, min_height)
         if len(result) == 0:
@@ -63,10 +70,11 @@ def scraper():
             if len(result) == 0:
                 return {'status': 'cannot scrap this site'}
 
-        return {'status': 'success', 'src_list': json.dumps(list(result))}
+        return {'status': 'success', 'src_list': list(result)}
 
     except Exception as e:
         return {'error': str(e)}
+
 
 @app.route('/url/analyze', methods=['POST'])
 def analyze_selected():
@@ -86,9 +94,9 @@ def analyze_selected():
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            analysis_result.append({'src': original, 'colors': str(colors)})
+            analysis_result.append({'src': original, 'colors': list(colors)})
 
-        return {'status': 'success', 'analysis_result': json.dumps(analysis_result)}
+        return {'status': 'success', 'analysis_result': list(analysis_result)}
 
     except Exception as e:
         return {'error': str(e)}
