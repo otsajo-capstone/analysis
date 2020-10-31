@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c8ae22-5df3-4cba-9667-4119d99b382c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/color_analyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloth_recognizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloth_recognizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_analyzer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,29 +186,33 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1320" y="581" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603072865301" />
-    <state width="1071" height="264" key="GridCell.Tab.0.bottom" timestamp="1604068775082">
+    <state width="1071" height="262" key="GridCell.Tab.0.bottom" timestamp="1604165474052">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1084" height="199" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603875116900" />
-    <state width="1071" height="264" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604068775082" />
-    <state width="1071" height="264" key="GridCell.Tab.0.center" timestamp="1604068775082">
+    <state width="1071" height="262" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604165474052" />
+    <state width="1071" height="262" key="GridCell.Tab.0.center" timestamp="1604165474051">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1084" height="199" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603875116900" />
-    <state width="1071" height="264" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604068775082" />
-    <state width="1071" height="264" key="GridCell.Tab.0.left" timestamp="1604068775081">
+    <state width="1071" height="262" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604165474051" />
+    <state width="1071" height="262" key="GridCell.Tab.0.left" timestamp="1604165474051">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1084" height="199" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603875116900" />
-    <state width="1071" height="264" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604068775081" />
-    <state width="1071" height="264" key="GridCell.Tab.0.right" timestamp="1604068775082">
+    <state width="1071" height="262" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604165474051" />
+    <state width="1071" height="262" key="GridCell.Tab.0.right" timestamp="1604165474051">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1084" height="199" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603875116900" />
-    <state width="1071" height="264" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604068775082" />
+    <state width="1071" height="262" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604165474051" />
     <state x="1314" y="319" key="SettingsEditor" timestamp="1603072919158">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1314" y="319" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1603072919158" />
+    <state x="47" y="95" width="1667" height="1078" key="dock-window-1" timestamp="1604165511318">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="47" y="95" width="1667" height="1078" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1604165511318" />
   </component>
 </project>

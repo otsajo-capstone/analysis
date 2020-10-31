@@ -1,27 +1,50 @@
 from flask import Flask, request
 from scrap import scrap_by_bs, scrap_by_selenium
-import requests
 import json
+import os
 from datetime import datetime
+import urllib.request
 from cloth_recognizer import cloth_recognizer
 from color_analyzer import color_analyzer
 
 app = Flask(__name__)
+dir_original = os.path.join(os.getcwd(), "original")
 
-'''
-POST로 scrap할 url을 받으면, 이미지 src를 배열 형태로 반환합니다.
-'''
-@app.route('/analyze', methods=['GET'])
+@app.route('/test_analyze', methods=['GET'])
 def test():
     original = "233356.png"
 
     try:
         now = datetime.now()
         filename = now.strftime("%Y%m%d_%H_%M_%S")
-        cloth = cloth_recognizer(original, filename)
+        cloth = cloth_recognizer(original)
         color = color_analyzer(cloth)
 
         return {'color': color}
+
+    except Exception as e:
+        return {'error': str(e)}
+
+@app.route('/image/analyze', methods=['POST'])
+def analyze_uploaded():
+    try:
+        files = request.files.getlist("files")
+
+        analysis_result = []
+
+        for file in files:
+            now = datetime.now()
+            original = now.strftime("%Y%m%d_%H_%M_%S")
+            original = str(original) + ".png"
+            path = os.path.join(dir_original, original)
+            file.save(path)
+
+            cloth = cloth_recognizer(path)
+            colors = color_analyzer(cloth)
+
+            analysis_result.append({'src': path, 'colors': str(colors)})
+
+        return {'status': 'success', 'analysis_result': json.dumps(analysis_result)}
 
     except Exception as e:
         return {'error': str(e)}
@@ -38,36 +61,34 @@ def scraper():
             result = scrap_by_selenium(url, min_width, min_height)
 
             if len(result) == 0:
-                return {'status': 'scrap failed'}
+                return {'status': 'cannot scrap this site'}
 
-        now = datetime.now()
-        filename = now.strftime("%Y%m%d_%H_%M_%S")
-        cloth_recognizer(filename)
-
-        return {'status': 'success', 'image_urls': list(result)}
+        return {'status': 'success', 'src_list': json.dumps(list(result))}
 
     except Exception as e:
         return {'error': str(e)}
 
-@app.route('/url/select', methods=['POST'])
-def selector():
+@app.route('/url/analyze', methods=['POST'])
+def analyze_selected():
     try:
-        url = request.form['url']
-        min_width = int(request.form['width'])
-        min_height = int(request.form['height'])
-        selected_index = request.form['selected']
-        selected_index = list(map(int, selected_index))
+        src_list_string = request.form['src_list']
+        src_list = json.loads(src_list_string)
 
-        result = scrap_by_bs(url, min_width, min_height)
-        if len(result) == 0:
-            result = scrap_by_selenium(url, min_width, min_height)
+        analysis_result = []
 
-            if len(result) == 0:
-                return {'status': 'scrap failed'}
+        for src in src_list:
+            now = datetime.now()
+            original = now.strftime("%Y%m%d_%H_%M_%S")
+            original = str(original) + ".png"
+            path = os.path.join(dir_original, original)
+            urllib.request.urlretrieve(src, path)
 
-        result = list(result)
-        result = [result[i] for i in selected_index]
-        return {'status': 'success', 'image_urls': result}
+            cloth = cloth_recognizer(path)
+            colors = color_analyzer(cloth)
+
+            analysis_result.append({'src': original, 'colors': str(colors)})
+
+        return {'status': 'success', 'analysis_result': json.dumps(analysis_result)}
 
     except Exception as e:
         return {'error': str(e)}

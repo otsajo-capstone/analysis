@@ -46,11 +46,10 @@ class fashion_tools(object):
 
 
 ###running code
-def cloth_recognizer(original, filename):
+def cloth_recognizer(original):
     api = fashion_tools(original, saved)
     image_ = api.get_dress()
-    filename_ = str(filename) + "_cloth.png"
-    cv2.imwrite(filename_, image_)
+    # cv2.imwrite(save_filename, image_)
 
     return image_
 

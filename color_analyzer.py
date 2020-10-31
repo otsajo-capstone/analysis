@@ -43,17 +43,26 @@ def color_analyzer(original):
     clt.fit(image)
 
     hist = centroid_histogram(clt)
+    hist = hist.tolist()
 
+    '''
     bar = plot_colors(hist, clt.cluster_centers_)
 
     plt.figure()
     plt.axis("off")
     plt.imshow(bar)
     plt.show()
+    '''
 
     rep_colors = []
 
+    i = 0
     for center in clt.cluster_centers_:
-        rep_colors.append(str(center))
+        center_ = center.tolist()
+        center_hex = [hex(int(c)) for c in center_]
+        center_hex = ''.join(center_hex)
+        center_hex = '#' + center_hex.replace("0x", "")
+        rep_colors.append({'hex': center_hex, 'ratio': hist[i]})
+        i += 1
 
     return rep_colors
