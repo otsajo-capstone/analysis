@@ -87,7 +87,10 @@ def analyze_selected():
         for src in src_list:
             now = datetime.now()
             original = now.strftime("%Y%m%d_%H_%M_%S")
-            original = str(original) + ".png"
+            if src.lower().find('.gif') != -1:
+                original = str(original) + ".gif"
+            else:
+                original = str(original) + ".png"
             path = os.path.join(dir_original, original)
             urllib.request.urlretrieve(src, path)
 
@@ -102,4 +105,5 @@ def analyze_selected():
         return {'error': str(e)}
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
+

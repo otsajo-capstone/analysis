@@ -36,10 +36,11 @@ def scrap_by_selenium(url, min_width, min_height):
     chrome_options = webdriver.ChromeOptions()
     USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Whale/2.8.107.16 Safari/537.36"
     chrome_options.add_argument("user-agent=" + USER_AGENT)
-    chrome = webdriver.Chrome(os.getcwd() + '/chromedriver', chrome_options=chrome_options)
-
-    path = './' + str(time.time())
-    os.mkdir(path)
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    linux_path = '/usr/local/bin/chromedriver'
+    chrome = webdriver.Chrome(linux_path, chrome_options=chrome_options)
 
     chrome.get(url)
     image_elements = chrome.find_elements_by_tag_name('img')

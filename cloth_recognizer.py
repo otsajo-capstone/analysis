@@ -11,6 +11,19 @@ session = InteractiveSession(config=config)
 
 saved = load_model("save_ckp_frozen.h5")
 
+def readImage(path):
+    try:
+        if (str(path).lower().find('.gif')) == -1:
+            return cv2.imread(path)
+        else:
+            gif = cv2.VideoCapture(path)
+            ret, frame = gif.read()
+            if ret:
+                return frame
+
+    except Exception as e:
+        print(e)
+        return None
 
 class fashion_tools(object):
     def __init__(self,imageid,model,version=1.1):
@@ -22,7 +35,7 @@ class fashion_tools(object):
         """limited to top wear and full body dresses (wild and studio working)"""
         """takes input rgb----> return PNG"""
         name =  self.imageid
-        file = cv2.imread(name)
+        file = readImage(name)
         file = tf.image.resize_with_pad(file,target_height=512,target_width=512)
         rgb  = file.numpy()
         file = np.expand_dims(file,axis=0)/ 255.
