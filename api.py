@@ -6,6 +6,8 @@ from datetime import datetime
 import urllib.request
 from cloth_recognizer import cloth_recognizer
 from color_analyzer import color_analyzer
+from PIL import Image
+import copy
 
 app = Flask(__name__)
 dir_original = os.path.join(os.getcwd(), "original")
@@ -32,14 +34,19 @@ def analyze_uploaded():
         for file in files:
             now = datetime.now()
             original = now.strftime("%Y%m%d_%H_%M_%S")
+            print(file.content_type)
             original = str(original) + ".png"
             path = os.path.join(dir_original, original)
             file.save(path)
 
+            if file.content_type == 'image/gif':
+                img = Image.open(path)
+                img.save(path, 'png')
+
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            analysis_result.append({'src': path, 'colors': list(colors)})
+            analysis_result.append({'name': original, 'src': path, 'colors': list(colors)})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -74,8 +81,7 @@ def scraper():
 @app.route('/url/analyze', methods=['POST'])
 def analyze_selected():
     try:
-        src_list_string = request.form['src_list']
-        src_list = json.loads(src_list_string)
+        src_list = request.json['src_list']
 
         analysis_result = []
 
@@ -87,12 +93,19 @@ def analyze_selected():
             else:
                 original = str(original) + ".png"
             path = os.path.join(dir_original, original)
+            path_to_remove = copy.deepcopy(path)
+
             urllib.request.urlretrieve(src, path)
+
+            if src.lower().find('.gif') != -1:
+                gif = Image.open(path)
+                path = path[:len(path)-4] + ".png"
+                gif.save(path, 'png')
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            analysis_result.append({'src': original, 'colors': list(colors)})
+            analysis_result.append({'name': original, 'src': path, 'colors': list(colors)})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
