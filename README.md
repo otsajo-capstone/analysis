@@ -15,7 +15,7 @@ or
 - scikit-learn
 
 # API
-1. '/image/', [GET]
+1. '/image', [GET]
     - 서버에 저장된 이미지 파일 소스
     
     - 요청 변수
