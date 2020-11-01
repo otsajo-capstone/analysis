@@ -19,16 +19,21 @@ def scrap_by_bs(url, min_width, min_height):
     for image in images_tags:
         src = image.get('src')
 
+        width_checked = 0
+        height_checked = 0
+
         if type(image.get('width')) == str:
             width = int(image.get('width'))
             if width >= min_width:
-                image_src.add(src)
-            continue
+                width_checked = 1
 
-        elif type(image.get('height')) == str:
+        if type(image.get('height')) == str:
             height = int(image.get('height'))
             if height >= min_height:
-                image_src.add(src)
+                height_checked = 1
+
+        if width_checked == 1 and height_checked == 1:
+            image_src.add(src)
 
     return image_src
 

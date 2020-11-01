@@ -58,8 +58,8 @@ def analyze_uploaded():
 def scraper():
     try:
         url = request.form['url']
-        min_width = 150
-        min_height = 150
+        min_width = 100
+        min_height = 100
         if request.form['width']:
             min_width = int(request.form['width'])
         if request.form['height']:
