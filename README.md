@@ -26,11 +26,7 @@ or
     
     - 출력 결과
     
-        |필드|타입|설명|
-        |:------:|:---:|:---:|
-        |status|string|분석 성공 여부|
-        |analysis_result|array(result)|이미지들의 색상 분석 결과|
-        <br />
+        이미지<br /><br />
 
 2. '/image/analyze', [POST]
     - 이미지(하나 혹은 다수) 파일들을 업로드하면 각각의 색상 분석 결과 리턴
