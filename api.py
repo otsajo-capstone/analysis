@@ -11,7 +11,7 @@ app = Flask(__name__)
 dir_original = os.path.join(os.getcwd(), "original")
 
 
-@app.route('/', methods=['GET'])
+@app.route('/image', methods=['GET'])
 def serve_image():
     filename = request.args.get('filename')
     path = os.path.join(dir_original, filename)
