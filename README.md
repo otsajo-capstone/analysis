@@ -48,6 +48,7 @@ or
     
         |필드|타입|설명|
         |:------:|:---:|:---:|
+        |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
         |colors|array({hex, ratio})|색상의 hex값과 비율값의 배열|
         <br />
@@ -91,6 +92,7 @@ or
     
         |필드|타입|설명|
         |:------:|:---:|:---:|
+        |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
         |colors|array({hex, ratio})|색상의 hex값과 비율값의 배열|
         <br />
