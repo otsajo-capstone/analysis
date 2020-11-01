@@ -45,8 +45,9 @@ def analyze_uploaded():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
+            external_path = 'http://34.82.152.172:5000/image?filename=' + original
 
-            analysis_result.append({'name': original, 'src': path, 'colors': list(colors)})
+            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -99,13 +100,16 @@ def analyze_selected():
 
             if src.lower().find('.gif') != -1:
                 gif = Image.open(path)
+                original = original[:len(original)-4] + ".png"
                 path = path[:len(path)-4] + ".png"
                 gif.save(path, 'png')
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            analysis_result.append({'name': original, 'src': path, 'colors': list(colors)})
+            external_path = 'http://34.82.152.172:5000/image?filename=' + original
+
+            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
