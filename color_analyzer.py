@@ -38,7 +38,7 @@ def color_analyzer(original):
     image = cv2.cvtColor(original, cv2.COLOR_BGR2RGB)
     image = image.reshape((image.shape[0] * image.shape[1], 3))
 
-    k = 5
+    k = 3
     clt = KMeans(n_clusters=k)
     clt.fit(image)
 
