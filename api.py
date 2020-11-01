@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, send_file
 from scrap import scrap_by_bs, scrap_by_selenium
 import json
 import os
@@ -10,21 +10,15 @@ from color_analyzer import color_analyzer
 app = Flask(__name__)
 dir_original = os.path.join(os.getcwd(), "original")
 
+@app.route('/', methods=['GET'])
+def serve_image():
+    filename = request.args.get('filename')
+    path = os.path.join(dir_original, filename)
 
-@app.route('/test_analyze', methods=['GET'])
-def test():
-    original = "233356.png"
-
-    try:
-        now = datetime.now()
-        filename = now.strftime("%Y%m%d_%H_%M_%S")
-        cloth = cloth_recognizer(original)
-        color = color_analyzer(cloth)
-
-        return {'color': color}
-
-    except Exception as e:
-        return {'error': str(e)}
+    if path[-4:] == '.gif':
+        return send_file(path, mimetype='image/gif')
+    else:
+        return send_file(path, mimetype='image/png')
 
 
 @app.route('/image/analyze', methods=['POST'])

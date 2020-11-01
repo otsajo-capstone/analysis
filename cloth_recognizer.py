@@ -65,7 +65,3 @@ def cloth_recognizer(original):
     # cv2.imwrite(save_filename, image_)
 
     return image_
-
-'''
-    
-'''

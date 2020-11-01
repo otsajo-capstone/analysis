@@ -1,4 +1,8 @@
 # 필요 모듈
+    pip install -r requirements.txt
+
+or
+
     pip install
 - flask
 - requests
@@ -6,7 +10,8 @@
 - selenium
 - image
 - opencv-python
-- tensorflow
+- opencv-contrib-python
+- tensorflow=2.2.0
 - scikit-learn
 
 # API

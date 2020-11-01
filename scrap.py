@@ -40,6 +40,7 @@ def scrap_by_selenium(url, min_width, min_height):
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     linux_path = '/usr/local/bin/chromedriver'
+    windows_path = os.getcwd() + '/chromedriver'
     chrome = webdriver.Chrome(linux_path, chrome_options=chrome_options)
 
     chrome.get(url)

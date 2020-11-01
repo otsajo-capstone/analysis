@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c8ae22-5df3-4cba-9667-4119d99b382c" name="Default Changelist" comment="" />
+    <list default="true" id="a1c8ae22-5df3-4cba-9667-4119d99b382c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver_linux64 (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver_linux64.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloth_recognizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloth_recognizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,9 +213,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1314" y="319" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1603072919158" />
-    <state x="47" y="95" width="1667" height="1078" key="dock-window-1" timestamp="1604208869683">
+    <state x="428" y="336" width="1420" height="960" key="dock-window-1" timestamp="1604223593688">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="47" y="95" width="1667" height="1078" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1604208869683" />
+    <state x="428" y="336" width="1420" height="960" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1604223593688" />
   </component>
 </project>
