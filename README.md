@@ -1,4 +1,4 @@
-# 필요 모듈
+# 필요 모듈 설치
     pip install -r requirements.txt
 
 or
@@ -15,7 +15,24 @@ or
 - scikit-learn
 
 # API
-1. '/image/analyze', [POST]
+1. '/image/', [GET]
+    - 서버에 저장된 이미지 파일 소스
+    
+    - 요청 변수
+    
+        |요청 변수명|타입|필수 여부|기본값|설명|
+        |:------:|:---:|:---:|:---:|:---:|
+        |filename|string|O|없음|파일이름|
+    
+    - 출력 결과
+    
+        |필드|타입|설명|
+        |:------:|:---:|:---:|
+        |status|string|분석 성공 여부|
+        |analysis_result|array(result)|이미지들의 색상 분석 결과|
+        <br />
+
+2. '/image/analyze', [POST]
     - 이미지(하나 혹은 다수) 파일들을 업로드하면 각각의 색상 분석 결과 리턴
 
     - 요청 변수
@@ -39,7 +56,7 @@ or
         |colors|array({hex, ratio})|색상의 hex값과 비율값의 배열|
         <br />
 
-2. '/url', [POST]
+3. '/url', [POST]
     - 스크랩할 링크를 받으면 이미지 링크들을 리턴
     
     - 요청 변수
@@ -58,7 +75,7 @@ or
         |src_list|array(string)|이미지들의 소스 url|
         <br />
     
-3. '/url/analyze', [POST]
+4. '/url/analyze', [POST]
     - 분석할 이미지 링크들을 받으면 각각의 색상 분석 결과 리턴
 
     - 요청 변수
