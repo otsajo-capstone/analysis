@@ -8,8 +8,10 @@ from cloth_recognizer import cloth_recognizer
 from color_analyzer import color_analyzer
 from PIL import Image
 import copy
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 dir_original = os.path.join(os.getcwd(), "original")
 
 
@@ -34,7 +36,6 @@ def analyze_uploaded():
         for file in files:
             now = datetime.now()
             original = now.strftime("%Y%m%d_%H_%M_%S")
-            print(file.content_type)
             original = str(original) + ".png"
             path = os.path.join(dir_original, original)
             file.save(path)
@@ -96,7 +97,10 @@ def analyze_selected():
             path = os.path.join(dir_original, original)
             path_to_remove = copy.deepcopy(path)
 
-            urllib.request.urlretrieve(src, path)
+            src_okay = copy.deepcopy(src)
+            if src_okay.find('http:') == -1:
+                src_okay = 'http:' + src_okay
+            urllib.request.urlretrieve(src_okay, path)
 
             if src.lower().find('.gif') != -1:
                 gif = Image.open(path)
