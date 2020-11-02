@@ -98,7 +98,7 @@ def analyze_selected():
             path_to_remove = copy.deepcopy(path)
 
             src_okay = copy.deepcopy(src)
-            if src_okay.find('http:') == -1:
+            if src_okay.find('http:') == -1 and src_okay.find('https:') == -1:
                 src_okay = 'http:' + src_okay
             urllib.request.urlretrieve(src_okay, path)
 
