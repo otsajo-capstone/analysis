@@ -14,9 +14,12 @@ def custom_KMeans(image_pixels, cluster):
     max_c = 255
 
     # Generate random color points in RGB
-    centroids_r = [100, 150, 200]
-    centroids_g = [100, 150, 200]
-    centroids_b = [100, 150, 200]
+    #centroids_r = np.random.uniform(min_c, max_c, cluster)
+    #centroids_g = np.random.uniform(min_c, max_c, cluster)
+    #centroids_b = np.random.uniform(min_c, max_c, cluster)
+    centroids_r = [64, 128, 172]
+    centroids_g = [64, 128, 172]
+    centroids_b = [64, 128, 172]
     centroids = np.array(list(zip(centroids_r, centroids_g, centroids_b)))
 
     def euclidean_distance(center, target):
@@ -66,7 +69,7 @@ def custom_KMeans(image_pixels, cluster):
             error[i] = euclidean_distance(centroids_old[i], centroids[i])
 
     labels_counter_all = sum(labels_counter)
-    labels_ratio = [labels_counter[i]/labels_counter_all for i in range(len(labels_counter))]
+    labels_ratio = [labels_counter[i]/labels_counter_all for i in range(cluster)]
     centroids_hex = []
     for center in centroids:
         center_hex = []
@@ -79,13 +82,15 @@ def custom_KMeans(image_pixels, cluster):
         center_hex = '#' + center_hex.replace("0x", "")
         centroids_hex.append(center_hex)
 
-    centroids_hex = list(zip(centroids_hex, labels_ratio))
-    centroids_hex = sorted(centroids_hex, key=lambda x: x[1], reverse=True)
+    centroids_result = []
+    for i in range(cluster):
+        centroids_result.append({'hex': centroids_hex[i], 'ratio': labels_ratio[i]})
+    centroids_result = sorted(centroids_result, key=lambda x: x['ratio'], reverse=True)
 
-    return centroids_hex
+    return centroids_result
 
 def color_analyzer(original):
-    image = cv2.resize(original, dsize=(0, 0), fx=0.3, fy=0.3, interpolation=cv2.INTER_AREA)
+    image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = image.reshape((image.shape[0] * image.shape[1], 3))
     result = custom_KMeans(image, 3)
