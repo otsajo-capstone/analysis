@@ -13,6 +13,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 dir_original = os.path.join(os.getcwd(), "original")
+server_address = "http://34.105.97.231:5000/"
 
 
 @app.route('/image', methods=['GET'])
@@ -46,7 +47,7 @@ def analyze_uploaded():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
-            external_path = 'http://34.105.97.231:5000/image?filename=' + original
+            external_path = server_address + 'image?filename=' + original
 
             analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
 
@@ -111,7 +112,7 @@ def analyze_selected():
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
 
-            external_path = 'http://34.82.152.172:5000/image?filename=' + original
+            external_path = server_address + 'image?filename=' + original
 
             analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
 

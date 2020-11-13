@@ -14,6 +14,7 @@ or
 - opencv-python
 - opencv-contrib-python
 - tensorflow=2.2.0
+- flask_cors
 
 # API
 1. '/image', [GET]
