@@ -9,10 +9,11 @@ or
 - bs4
 - selenium
 - image
+- scikit-build
+- scikit-learn
 - opencv-python
 - opencv-contrib-python
 - tensorflow=2.2.0
-- scikit-learn
 
 # API
 1. '/image', [GET]

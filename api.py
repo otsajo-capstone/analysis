@@ -46,7 +46,7 @@ def analyze_uploaded():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
-            external_path = 'http://34.82.152.172:5000/image?filename=' + original
+            external_path = 'http://34.105.97.231:5000/image?filename=' + original
 
             analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
 
