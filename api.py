@@ -1,6 +1,5 @@
 from flask import Flask, request, send_file
 from scrap import scrap_by_bs, scrap_by_selenium
-import json
 import os
 from datetime import datetime
 import urllib.request
@@ -14,6 +13,11 @@ app = Flask(__name__)
 CORS(app)
 dir_original = os.path.join(os.getcwd(), "original")
 server_address = "http://34.105.97.231:5000/"
+
+
+@app.route('/', methods=['GET'])
+def initial():
+    return "Analysis Server for Otsajo App!"
 
 
 @app.route('/image', methods=['GET'])
@@ -121,6 +125,7 @@ def analyze_selected():
     except Exception as e:
         return {'error': str(e)}
 
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
 
