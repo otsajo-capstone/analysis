@@ -38,7 +38,6 @@ def custom_KMeans(image_pixels, cluster):
 
     # 4. Iterate while error converges to 0
     while error.all() != 0:
-        num_nonzero_pixels = deepcopy(len(image_pixels))
         # 2. Classify pixels into group
         for i in range(len(image_pixels)):
             distances = np.zeros(cluster)
@@ -92,13 +91,23 @@ def custom_KMeans(image_pixels, cluster):
 
 def color_analyzer(original):
     image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image = image.reshape((image.shape[0] * image.shape[1], 3))
-    result = custom_KMeans(image, 3)
+    cv2.imwrite('check1.png', image)    # BGRA Image
+
+    # Reshape to one-dimensional RGB array adapting alpha channel
+    image_1d = []
+    for r in image:
+        for c in r:
+            if c[3] >= 1:
+                image_1d.append([c[2], c[1], c[0]])
+            
+    image_1d = np.array(image_1d)
+
+    result = custom_KMeans(image_1d, 3)
 
     return result
 
-    '''
+
+'''
     k = 3
     clt = KMeans(n_clusters=k)
     clt.fit(image)
@@ -121,13 +130,11 @@ def color_analyzer(original):
 
     hist = centroid_histogram(clt)
     hist = hist.tolist()
-    '''
 
-    '''
     bar = plot_colors(hist, clt.cluster_centers_)
 
     plt.figure()
     plt.axis("off")
     plt.imshow(bar)
     plt.show()
-    '''
+'''
