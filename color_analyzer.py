@@ -44,7 +44,7 @@ def custom_KMeans(image_pixels, cluster):
             distances = np.zeros(cluster)
 
             # Ignore zero pixels
-            if sum(image_pixels[i]) == 0:
+            if sum(image_pixels[i]) <= 50:
                 continue
 
             # calculate euclidean distance to find out appropriate color group
@@ -88,6 +88,7 @@ def custom_KMeans(image_pixels, cluster):
     centroids_result = sorted(centroids_result, key=lambda x: x['ratio'], reverse=True)
 
     return centroids_result
+
 
 def color_analyzer(original):
     image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)

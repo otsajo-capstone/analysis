@@ -53,6 +53,7 @@ or
         |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
         |colors|array({hex, ratio})|색상의 hex값과 비율값의 배열|
+        |result|array({type, ratio})|퍼스널 컬러 타입과 비율값의 배열|
         <br />
 
 3. '/url', [POST]
@@ -97,5 +98,6 @@ or
         |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
         |colors|array({hex, ratio})|색상의 hex값과 비율값의 배열|
+        |result|array({type, ratio})|퍼스널 컬러 타입과 비율값의 배열|
         <br />
     

@@ -62,6 +62,6 @@ class fashion_tools(object):
 def cloth_recognizer(original):
     api = fashion_tools(original, saved)
     image_ = api.get_dress()
-    # cv2.imwrite(save_filename, image_)
+    # cv2.imwrite(original + '_out.png', image_)
 
     return image_

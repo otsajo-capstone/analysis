@@ -5,6 +5,7 @@ from datetime import datetime
 import urllib.request
 from cloth_recognizer import cloth_recognizer
 from color_analyzer import color_analyzer
+from p_color_classifier import p_color_classifier
 from PIL import Image
 import copy
 from flask_cors import CORS
@@ -51,9 +52,10 @@ def analyze_uploaded():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
+            result = p_color_classifier(colors)
             external_path = server_address + 'image?filename=' + original
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
+            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors), 'result': result})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -115,10 +117,11 @@ def analyze_selected():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
+            result = p_color_classifier(colors)
 
             external_path = server_address + 'image?filename=' + original
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors)})
+            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors), 'result': result})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 

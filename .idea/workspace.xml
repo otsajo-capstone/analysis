@@ -20,12 +20,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c8ae22-5df3-4cba-9667-4119d99b382c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/autumn_warm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p_color_classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/palette.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_114856749.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_114857507.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_120305405.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_124045228.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_143207094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_150635578.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_155204140.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_155206066.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_155207697.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_155422901.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_155423597.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/KakaoTalk_20190109_162725932.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-다크-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-다크-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-다크-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-다크-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-소프트-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-소프트-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-소프트-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-소프트-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-트루-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-트루-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-트루-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/가을-트루-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-딥-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-딥-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-딥-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-딥톤-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-브라이트-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-브라이트-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-브라이트-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-브라이트-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-트루-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-트루-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-트루-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/겨울-트루-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-라이트-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-라이트-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-라이트-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-라이트-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-브라이트-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-브라이트-연예인.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-브라이트-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-브라이트-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-트루-베스트-워스트.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-트루-추천템.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personal_color_tip/봄-트루-특징.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_warm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/summer_cool.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/winter_cool.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1093058_6_500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/20201030_23_42_37_cloth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/233356.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloth_recognizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/cloth_recognizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_analyzer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,27 +150,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="dat_analyzer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../dat_analyzer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../dat_analyzer/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,6 +163,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraping/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="p_color_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/p_color_classifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="palette" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/palette.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,41 +234,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scrap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Chaehwan Lim\anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.api" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.p_color_classifier" />
+      <item itemvalue="Python.palette" />
       <item itemvalue="Python.run" />
-      <item itemvalue="Python.scrap" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.api" />
+        <item itemvalue="Python.p_color_classifier" />
+        <item itemvalue="Python.palette" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.scrap" />
       </list>
     </recent_temporary>
   </component>
@@ -233,26 +287,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1320" y="581" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604746066292" />
-    <state width="1430" height="317" key="GridCell.Tab.0.bottom" timestamp="1605200931874">
+    <state width="1772" height="164" key="GridCell.Tab.0.bottom" timestamp="1605436111054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1045" height="308" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605171219206" />
-    <state width="1430" height="317" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605200931874" />
-    <state width="1430" height="317" key="GridCell.Tab.0.center" timestamp="1605200931874">
+    <state width="1772" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605436111054" />
+    <state width="1772" height="164" key="GridCell.Tab.0.center" timestamp="1605436111054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1045" height="308" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605171219206" />
-    <state width="1430" height="317" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605200931874" />
-    <state width="1430" height="317" key="GridCell.Tab.0.left" timestamp="1605200931874">
+    <state width="1772" height="164" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605436111054" />
+    <state width="1772" height="164" key="GridCell.Tab.0.left" timestamp="1605436111053">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1045" height="308" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605171219206" />
-    <state width="1430" height="317" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605200931874" />
-    <state width="1430" height="317" key="GridCell.Tab.0.right" timestamp="1605200931874">
+    <state width="1772" height="164" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605436111053" />
+    <state width="1772" height="164" key="GridCell.Tab.0.right" timestamp="1605436111054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1045" height="308" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605171219206" />
-    <state width="1430" height="317" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605200931874" />
+    <state width="1772" height="164" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605436111054" />
     <state width="1045" height="308" key="GridCell.Tab.1.bottom" timestamp="1605171219206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,6 +327,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1314" y="319" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1603072919158" />
+    <state x="717" y="460" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605365866671">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="717" y="460" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1605365866671" />
     <state x="428" y="336" width="1420" height="960" key="dock-window-1" timestamp="1604223593688">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
