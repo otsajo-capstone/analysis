@@ -81,42 +81,48 @@ def p_color_classifier(centroids_result):
 
         min_dist = 16777216
         p_color_type = ''
+        p_color_subtype = ''
 
         # spring
-        p_color_range = [x for x in spring_warm_sorted]
+        p_color_range = [x for x in spring_warm_labeled]
         for c in p_color_range:
-            temp_dist = rgb_euclidean_distance(hex_string, c)
+            print(c['hex'])
+            temp_dist = rgb_euclidean_distance(hex_string, c['hex'])
             if min_dist > temp_dist:
                 min_dist = temp_dist
+                p_color_subtype = c['subtype']
                 p_color_type = '봄 웜'
 
         # summer
-        p_color_range = [x for x in summer_cool_sorted]
+        p_color_range = [x for x in summer_cool_labeled]
         for c in p_color_range:
-            temp_dist = rgb_euclidean_distance(hex_string, c)
+            temp_dist = rgb_euclidean_distance(hex_string, c['hex'])
             if min_dist > temp_dist:
                 min_dist = temp_dist
+                p_color_subtype = c['subtype']
                 p_color_type = '여름 쿨'
 
         # autumn
-        p_color_range = [x for x in autumn_warm_sorted]
+        p_color_range = [x for x in autumn_warm_labeled]
         for c in p_color_range:
-            temp_dist = rgb_euclidean_distance(hex_string, c)
+            temp_dist = rgb_euclidean_distance(hex_string, c['hex'])
             if min_dist > temp_dist:
                 min_dist = temp_dist
+                p_color_subtype = c['subtype']
                 p_color_type = '가을 웜'
 
         # winter
-        p_color_range = [x for x in winter_cool_sorted]
+        p_color_range = [x for x in winter_cool_labeled]
         for c in p_color_range:
-            temp_dist = rgb_euclidean_distance(hex_string, c)
+            temp_dist = rgb_euclidean_distance(hex_string, c['hex'])
             if min_dist > temp_dist:
                 min_dist = temp_dist
+                p_color_subtype = c['subtype']
                 p_color_type = '겨울 쿨'
 
         duplicate_flag = 0
         for r in result:
-            if r['type'] == p_color_type:
+            if r['type'] == p_color_type and r['subtype'] == p_color_subtype:
                 duplicate_flag = 1
                 new_ratio = r['ratio'] + ratio
                 r['ratio'] = new_ratio
@@ -125,14 +131,15 @@ def p_color_classifier(centroids_result):
         if duplicate_flag == 0:
             result.append({
                 "ratio": ratio,
-                "type": p_color_type
+                "type": p_color_type,
+                "subtype": p_color_subtype
             })
 
     result = sorted(result, key=lambda x: x['ratio'], reverse=True)
 
     return result
 
-'''
+
 print(p_color_classifier([
     {
         'hex': '#852f44',
@@ -147,4 +154,3 @@ print(p_color_classifier([
         'ratio': 0.7
     }
 ]))
-'''

@@ -3,7 +3,7 @@ import cv2
 from copy import deepcopy
 
 '''
-image: one-dimensional array which consists of 3-channel(RGB) element
+image: one-dimensional array which consists of 3-channel element
 cluster: the number of group to classify
 
 this custom_KMeans clusters color code ignoring true black code(0, 0, 0) 
@@ -91,7 +91,7 @@ def custom_KMeans(image_pixels, cluster):
 
 def color_analyzer(original):
     image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)
-    cv2.imwrite('check1.png', image)    # BGRA Image
+    # cv2.imwrite('check1.png', image)    # BGRA Image
 
     # Reshape to one-dimensional RGB array adapting alpha channel
     image_1d = []

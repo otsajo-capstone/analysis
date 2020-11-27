@@ -16,21 +16,6 @@ spring_warm = [
     '88bee4', '5b9ed5', '71bcdc', '9089d7', '4564be'
 ]
 
-spring_warm_sorted = [
-    '0053c7', '0e5e41', '368aea', '3a7c3f', '3c8e44',
-    '4564be', '53c9e5', '592a86', '5b9ed5', '607fd9',
-    '6db35a', '71bcdc', '7659ab', '8063cd', '858d38',
-    '85a6eb', '88bee4', '88c76e', '9089d7', 'a8dde1',
-    'b488bd', 'b9d66a', 'b9da83', 'bcb5a3', 'c2d558',
-    'c4b8b8', 'ca205f', 'd56cae', 'd8a07b', 'ea2336',
-    'ee3b50', 'f03e3c', 'f06260', 'f13d58', 'f1708f',
-    'f1725f', 'f17e8b', 'f25790', 'f36072', 'f4734b',
-    'f54c2b', 'f5a518', 'f76452', 'f79886', 'f7bcae',
-    'f85d49', 'f9a688', 'f9c5c7', 'fae6db', 'fba2b8',
-    'fca845', 'fcd2a0', 'fcd667', 'fcd6c3', 'fcf1b1',
-    'fda59b', 'fdc66c', 'ff9f1c', 'ffe4d1', 'ffeacf'
-]
-
 summer_cool = [
     # light
     'e5e3d7', 'c1bfb3', '847d77', 'b1b7b7', '7e959d',
@@ -47,21 +32,6 @@ summer_cool = [
     'f4b9bd', 'c48c8f', 'b38285', '8b475e', '713745',
     '8892b5', '596178', '54495a', '60947d', '37574c',
     '79bcc5', '4f7b94', '2f4553', 'e3d99c', 'd8cb87'
-]
-
-summer_cool_sorted = [
-    '175a8f', '1ba685', '217e76', '2e6e7a', '2f4553',
-    '346ea0', '37574c', '38619f', '413f40', '42474d',
-    '4b497b', '4f7b94', '4f8794', '513d3f', '5378bf',
-    '538db3', '54495a', '554782', '596178', '5b5851',
-    '5c4c4d', '60947d', '64abcb', '6ab8e6', '713745',
-    '798a9c', '79bcc5', '7c7fb2', '7e959d', '7f8078',
-    '847d77', '84caec', '852f54', '8892b5', '8b475e',
-    '8f797b', '90acdb', '9783ca', '9c8f89', '9ea7d2',
-    'a0a797', 'a4b1b7', 'b1b7b7', 'b38285', 'b75c87',
-    'c1bfb3', 'c48c8f', 'c7c5b9', 'd1ccc6', 'd68aa8',
-    'd8cb87', 'dcdacd', 'dd5885', 'dddecc', 'e3d99c',
-    'e5e3d7', 'f4b9bd', 'f5a8ba', 'fac5d7', 'fd80a8'
 ]
 
 autumn_warm = [
@@ -82,21 +52,6 @@ autumn_warm = [
     '392934', '1c3532', '22405a', '393027', '252525'
 ]
 
-autumn_warm_sorted = [
-    '17635f', '184655', '194a72', '1c3532', '1c3f29',
-    '1c7386', '1d3c37', '1e3628', '22405a', '252525',
-    '2b3328', '2b6654', '2e3351', '392934', '393027',
-    '3b2027', '3c4446', '45282c', '453852', '4a2129',
-    '4c453d', '55608e', '5f6738', '66635c', '694e31',
-    '6d5f32', '6f282e', '705743', '743435', '852f2e',
-    '854543', '85936f', '862a37', '878974', '8792c0',
-    '8e9d5a', '957a5c', '989890', '9b3e49', 'a6474b',
-    'a86354', 'a9a781', 'af9270', 'b5b196', 'b78e58',
-    'b8463b', 'bd334a', 'c3795e', 'c45657', 'c5beb6',
-    'c5c0aa', 'cdaa82', 'cfbba3', 'd0c5b1', 'd22e35',
-    'd47e4b', 'd7967a', 'daab7f', 'e0ddcc', 'e2d1b7'
-]
-
 winter_cool = [
     # bright
     'ffffff', 'b9bfbd', '151314', '2057a7', '1b305f',
@@ -115,20 +70,76 @@ winter_cool = [
     '302221', '2c2132', '17383f', '22508e', '183b35'
 ]
 
+spring_warm_labeled = [
+    {'hex': 'fcf1b1', 'subtype': 'bright'}, {'hex': 'f9c5c7', 'subtype': 'bright'}, {'hex': 'b9d66a', 'subtype': 'bright'}, {'hex': 'f85d49', 'subtype': 'bright'},
+    {'hex': 'f54c2b', 'subtype': 'bright'}, {'hex': 'f17e8b', 'subtype': 'bright'}, {'hex': 'ee3b50', 'subtype': 'bright'}, {'hex': 'f1708f', 'subtype': 'bright'},
+    {'hex': '53c9e5', 'subtype': 'bright'}, {'hex': 'ca205f', 'subtype': 'bright'}, {'hex': '0053c7', 'subtype': 'bright'}, {'hex': 'f5a518', 'subtype': 'bright'},
+    {'hex': '3c8e44', 'subtype': 'bright'}, {'hex': '8063cd', 'subtype': 'bright'}, {'hex': 'a8dde1', 'subtype': 'bright'}, {'hex': 'c4b8b8', 'subtype': 'bright'},
+    {'hex': '368aea', 'subtype': 'bright'}, {'hex': 'ff9f1c', 'subtype': 'bright'}, {'hex': 'd56cae', 'subtype': 'bright'}, {'hex': 'ffeacf', 'subtype': 'bright'},
+    {'hex': 'ffe4d1', 'subtype': 'true'}, {'hex': 'fcd6c3', 'subtype': 'true'}, {'hex': 'fcd2a0', 'subtype': 'true'}, {'hex': 'd8a07b', 'subtype': 'true'},
+    {'hex': 'bcb5a3', 'subtype': 'true'}, {'hex': 'c2d558', 'subtype': 'true'}, {'hex': '88c76e', 'subtype': 'true'}, {'hex': '3a7c3f', 'subtype': 'true'},
+    {'hex': '0e5e41', 'subtype': 'true'}, {'hex': '858d38', 'subtype': 'true'}, {'hex': 'f79886', 'subtype': 'true'}, {'hex': 'f76452', 'subtype': 'true'},
+    {'hex': 'f06260', 'subtype': 'true'}, {'hex': 'f13d58', 'subtype': 'true'}, {'hex': 'ea2336', 'subtype': 'true'}, {'hex': '85a6eb', 'subtype': 'true'},
+    {'hex': '607fd9', 'subtype': 'true'}, {'hex': 'b488bd', 'subtype': 'true'}, {'hex': '7659ab', 'subtype': 'true'}, {'hex': '592a86', 'subtype': 'true'},
+    {'hex': 'fae6db', 'subtype': 'light'}, {'hex': 'f7bcae', 'subtype': 'light'}, {'hex': 'fda59b', 'subtype': 'light'}, {'hex': 'fba2b8', 'subtype': 'light'},
+    {'hex': 'f25790', 'subtype': 'light'}, {'hex': 'f9a688', 'subtype': 'light'}, {'hex': 'f4734b', 'subtype': 'light'}, {'hex': 'f1725f', 'subtype': 'light'},
+    {'hex': 'f03e3c', 'subtype': 'light'}, {'hex': 'f36072', 'subtype': 'light'}, {'hex': 'fcd667', 'subtype': 'light'}, {'hex': 'fdc66c', 'subtype': 'light'},
+    {'hex': 'fca845', 'subtype': 'light'}, {'hex': 'b9da83', 'subtype': 'light'}, {'hex': '6db35a', 'subtype': 'light'}, {'hex': '88bee4', 'subtype': 'light'},
+    {'hex': '5b9ed5', 'subtype': 'light'}, {'hex': '71bcdc', 'subtype': 'light'}, {'hex': '9089d7', 'subtype': 'light'}, {'hex': '4564be', 'subtype': 'light'}
+]
 
-winter_cool_sorted = [
-    '000000', '0e0e0e', '107b5d', '116872', '145a40',
-    '151314', '154f63', '17383f', '183b35', '1b305f',
-    '1c372e', '1c6a98', '1f2e4f', '1fa793', '20418e',
-    '2057a7', '22508e', '283025', '291e24', '2c2132',
-    '2f2c5b', '302221', '302e6c', '321f23', '361f27',
-    '38c372', '3a2230', '3b4346', '3ed284', '52d4e1',
-    '542c51', '562239', '5d95d0', '5e3579', '602f67',
-    '612429', '624d9c', '832a6a', '857dc6', '8e3450',
-    '9a67a0', '9b2849', '9e2632', 'a8e9ef', 'b3e4de',
-    'b9bfbd', 'c64796', 'c7d5f0', 'd7d1ed', 'd9374f',
-    'e67ea1', 'ed7cbe', 'f5d4df', 'f85c9d', 'fdd2ed',
-    'fe98da', 'ffc1e8', 'ffffff', 'ffffff', 'ffffff'
+summer_cool_labeled = [
+    {'hex': 'e5e3d7', 'subtype': 'light'}, {'hex': 'c1bfb3', 'subtype': 'light'}, {'hex': '847d77', 'subtype': 'light'}, {'hex': 'b1b7b7', 'subtype': 'light'},
+    {'hex': '7e959d', 'subtype': 'light'}, {'hex': '8f797b', 'subtype': 'light'}, {'hex': '5c4c4d', 'subtype': 'light'}, {'hex': 'f5a8ba', 'subtype': 'light'},
+    {'hex': 'fd80a8', 'subtype': 'light'}, {'hex': 'dd5885', 'subtype': 'light'}, {'hex': '90acdb', 'subtype': 'light'}, {'hex': '38619f', 'subtype': 'light'},
+    {'hex': '175a8f', 'subtype': 'light'}, {'hex': '1ba685', 'subtype': 'light'}, {'hex': '217e76', 'subtype': 'light'}, {'hex': '9783ca', 'subtype': 'light'},
+    {'hex': '554782', 'subtype': 'light'}, {'hex': '84caec', 'subtype': 'light'}, {'hex': '6ab8e6', 'subtype': 'light'}, {'hex': '5378bf', 'subtype': 'light'},
+    {'hex': 'dcdacd', 'subtype': 'true'}, {'hex': 'd1ccc6', 'subtype': 'true'}, {'hex': 'a0a797', 'subtype': 'true'}, {'hex': '7f8078', 'subtype': 'true'},
+    {'hex': '5b5851', 'subtype': 'true'}, {'hex': 'a4b1b7', 'subtype': 'true'}, {'hex': '798a9c', 'subtype': 'true'}, {'hex': '4f8794', 'subtype': 'true'},
+    {'hex': '2e6e7a', 'subtype': 'true'}, {'hex': '42474d', 'subtype': 'true'}, {'hex': 'fac5d7', 'subtype': 'true'}, {'hex': 'd68aa8', 'subtype': 'true'},
+    {'hex': 'b75c87', 'subtype': 'true'}, {'hex': '852f54', 'subtype': 'true'}, {'hex': '4b497b', 'subtype': 'true'}, {'hex': '64abcb', 'subtype': 'true'},
+    {'hex': '538db3', 'subtype': 'true'}, {'hex': '346ea0', 'subtype': 'true'}, {'hex': '9ea7d2', 'subtype': 'true'}, {'hex': '7c7fb2', 'subtype': 'true'},
+    {'hex': 'dddecc', 'subtype': 'soft'}, {'hex': 'c7c5b9', 'subtype': 'soft'}, {'hex': '9c8f89', 'subtype': 'soft'}, {'hex': '513d3f', 'subtype': 'soft'},
+    {'hex': '413f40', 'subtype': 'soft'}, {'hex': 'f4b9bd', 'subtype': 'soft'}, {'hex': 'c48c8f', 'subtype': 'soft'}, {'hex': 'b38285', 'subtype': 'soft'},
+    {'hex': '8b475e', 'subtype': 'soft'}, {'hex': '713745', 'subtype': 'soft'}, {'hex': '8892b5', 'subtype': 'soft'}, {'hex': '596178', 'subtype': 'soft'},
+    {'hex': '54495a', 'subtype': 'soft'}, {'hex': '60947d', 'subtype': 'soft'}, {'hex': '37574c', 'subtype': 'soft'}, {'hex': '79bcc5', 'subtype': 'soft'},
+    {'hex': '4f7b94', 'subtype': 'soft'}, {'hex': '2f4553', 'subtype': 'soft'}, {'hex': 'e3d99c', 'subtype': 'soft'}, {'hex': 'd8cb87', 'subtype': 'soft'}
+]
+
+autumn_warm_labeled = [
+    {'hex': 'e0ddcc', 'subtype': 'soft'}, {'hex': 'c5c0aa', 'subtype': 'soft'}, {'hex': 'b5b196', 'subtype': 'soft'}, {'hex': '989890', 'subtype': 'soft'},
+    {'hex': '66635c', 'subtype': 'soft'}, {'hex': 'daab7f', 'subtype': 'soft'}, {'hex': '957a5c', 'subtype': 'soft'}, {'hex': '705743', 'subtype': 'soft'},
+    {'hex': 'a9a781', 'subtype': 'soft'}, {'hex': '85936f', 'subtype': 'soft'}, {'hex': 'c45657', 'subtype': 'soft'}, {'hex': 'a6474b', 'subtype': 'soft'},
+    {'hex': '862a37', 'subtype': 'soft'}, {'hex': '17635f', 'subtype': 'soft'}, {'hex': '1c3f29', 'subtype': 'soft'}, {'hex': '8792c0', 'subtype': 'soft'},
+    {'hex': '55608e', 'subtype': 'soft'}, {'hex': '194a72', 'subtype': 'soft'}, {'hex': '2e3351', 'subtype': 'soft'}, {'hex': '3c4446', 'subtype': 'soft'},
+    {'hex': 'e2d1b7', 'subtype': 'true'}, {'hex': 'd0c5b1', 'subtype': 'true'}, {'hex': '878974', 'subtype': 'true'}, {'hex': 'af9270', 'subtype': 'true'},
+    {'hex': '4c453d', 'subtype': 'true'}, {'hex': 'd7967a', 'subtype': 'true'}, {'hex': 'a86354', 'subtype': 'true'}, {'hex': '854543', 'subtype': 'true'},
+    {'hex': '694e31', 'subtype': 'true'}, {'hex': '45282c', 'subtype': 'true'}, {'hex': 'd47e4b', 'subtype': 'true'}, {'hex': 'b8463b', 'subtype': 'true'},
+    {'hex': 'd22e35', 'subtype': 'true'}, {'hex': '852f2e', 'subtype': 'true'}, {'hex': '3b2027', 'subtype': 'true'}, {'hex': '6d5f32', 'subtype': 'true'},
+    {'hex': '1e3628', 'subtype': 'true'}, {'hex': '453852', 'subtype': 'true'}, {'hex': '1c7386', 'subtype': 'true'}, {'hex': '184655', 'subtype': 'true'},
+    {'hex': 'c5beb6', 'subtype': 'dark'}, {'hex': 'cfbba3', 'subtype': 'dark'}, {'hex': 'cdaa82', 'subtype': 'dark'}, {'hex': 'b78e58', 'subtype': 'dark'},
+    {'hex': 'c3795e', 'subtype': 'dark'}, {'hex': '8e9d5a', 'subtype': 'dark'}, {'hex': '5f6738', 'subtype': 'dark'}, {'hex': '2b3328', 'subtype': 'dark'},
+    {'hex': '2b6654', 'subtype': 'dark'}, {'hex': '1d3c37', 'subtype': 'dark'}, {'hex': '9b3e49', 'subtype': 'dark'}, {'hex': '6f282e', 'subtype': 'dark'},
+    {'hex': '4a2129', 'subtype': 'dark'}, {'hex': 'bd334a', 'subtype': 'dark'}, {'hex': '743435', 'subtype': 'dark'}, {'hex': '392934', 'subtype': 'dark'},
+    {'hex': '1c3532', 'subtype': 'dark'}, {'hex': '22405a', 'subtype': 'dark'}, {'hex': '393027', 'subtype': 'dark'}, {'hex': '252525', 'subtype': 'dark'}
+]
+
+winter_cool_labeled = [
+    {'hex': 'ffffff', 'subtype': 'bright'}, {'hex': 'b9bfbd', 'subtype': 'bright'}, {'hex': '151314', 'subtype': 'bright'}, {'hex': '2057a7', 'subtype': 'bright'},
+    {'hex': '1b305f', 'subtype': 'bright'}, {'hex': 'ed7cbe', 'subtype': 'bright'}, {'hex': 'c64796', 'subtype': 'bright'}, {'hex': '832a6a', 'subtype': 'bright'},
+    {'hex': '602f67', 'subtype': 'bright'}, {'hex': '9b2849', 'subtype': 'bright'}, {'hex': '52d4e1', 'subtype': 'bright'}, {'hex': 'b3e4de', 'subtype': 'bright'},
+    {'hex': 'd7d1ed', 'subtype': 'bright'}, {'hex': '3ed284', 'subtype': 'bright'}, {'hex': '1fa793', 'subtype': 'bright'}, {'hex': '624d9c', 'subtype': 'bright'},
+    {'hex': '302e6c', 'subtype': 'bright'}, {'hex': 'fdd2ed', 'subtype': 'bright'}, {'hex': '857dc6', 'subtype': 'bright'}, {'hex': '5d95d0', 'subtype': 'bright'},
+    {'hex': 'ffffff', 'subtype': 'true'}, {'hex': '3b4346', 'subtype': 'true'}, {'hex': '0e0e0e', 'subtype': 'true'}, {'hex': '2f2c5b', 'subtype': 'true'},
+    {'hex': '20418e', 'subtype': 'true'}, {'hex': 'f5d4df', 'subtype': 'true'}, {'hex': 'c7d5f0', 'subtype': 'true'}, {'hex': 'a8e9ef', 'subtype': 'true'},
+    {'hex': 'ffc1e8', 'subtype': 'true'}, {'hex': 'fe98da', 'subtype': 'true'}, {'hex': '38c372', 'subtype': 'true'}, {'hex': '107b5d', 'subtype': 'true'},
+    {'hex': '116872', 'subtype': 'true'}, {'hex': 'f85c9d', 'subtype': 'true'}, {'hex': 'd9374f', 'subtype': 'true'}, {'hex': '5e3579', 'subtype': 'true'},
+    {'hex': '1f2e4f', 'subtype': 'true'}, {'hex': '1c372e', 'subtype': 'true'}, {'hex': '562239', 'subtype': 'true'}, {'hex': '3a2230', 'subtype': 'true'},
+    {'hex': 'ffffff', 'subtype': 'dark'}, {'hex': '000000', 'subtype': 'dark'}, {'hex': 'e67ea1', 'subtype': 'dark'}, {'hex': '8e3450', 'subtype': 'dark'},
+    {'hex': '361f27', 'subtype': 'dark'}, {'hex': '9e2632', 'subtype': 'dark'}, {'hex': '612429', 'subtype': 'dark'}, {'hex': '321f23', 'subtype': 'dark'},
+    {'hex': '1c6a98', 'subtype': 'dark'}, {'hex': '154f63', 'subtype': 'dark'}, {'hex': '9a67a0', 'subtype': 'dark'}, {'hex': '542c51', 'subtype': 'dark'},
+    {'hex': '291e24', 'subtype': 'dark'}, {'hex': '145a40', 'subtype': 'dark'}, {'hex': '283025', 'subtype': 'dark'}, {'hex': '302221', 'subtype': 'dark'},
+    {'hex': '2c2132', 'subtype': 'dark'}, {'hex': '17383f', 'subtype': 'dark'}, {'hex': '22508e', 'subtype': 'dark'}, {'hex': '183b35', 'subtype': 'dark'}
 ]
 
 colors_original = [
@@ -138,9 +149,21 @@ colors_original = [
     winter_cool
 ]
 
-colors_sorted = [
-    spring_warm_sorted,
-    summer_cool_sorted,
-    autumn_warm_sorted,
-    winter_cool_sorted
-]
+def labeler(arr, label):
+    new_arr = []
+
+    for i in range(len(arr)):
+        if 0 <= i <= 19:
+            new_arr.append({'hex': arr[i], 'subtype': label[0]})
+        elif 20 <= i <= 39:
+            new_arr.append({'hex': arr[i], 'subtype': label[1]})
+        elif 40 <= i <= 59:
+            new_arr.append({'hex': arr[i], 'subtype': label[2]})
+
+    print(new_arr)
+
+
+labeler(spring_warm, ["bright", "true", "light"])
+labeler(summer_cool, ["light", "true", "soft"])
+labeler(autumn_warm, ["soft", "true", "dark"])
+labeler(winter_cool, ["bright", "true", "dark"])
