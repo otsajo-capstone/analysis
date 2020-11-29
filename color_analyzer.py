@@ -107,7 +107,7 @@ def centroid_histogram(clt):
 
 
 def color_analyzer(original):
-    image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)
+    image = cv2.resize(original, dsize=(0, 0), fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
     # cv2.imwrite('check1.png', image)    # BGRA Image
 
     # Reshape to one-dimensional RGB array adapting alpha channel
