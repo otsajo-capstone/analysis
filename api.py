@@ -41,7 +41,7 @@ def analyze_uploaded():
 
         for file in files:
             now = datetime.now()
-            original = now.strftime("%Y%m%d_%H_%M_%S")
+            original = now.strftime("%Y%m%d_%H_%M_%S_%f")
             original = str(original) + ".png"
             path = os.path.join(dir_original, original)
             file.save(path)
@@ -96,7 +96,7 @@ def analyze_selected():
 
         for src in src_list:
             now = datetime.now()
-            original = now.strftime("%Y%m%d_%H_%M_%S")
+            original = now.strftime("%Y%m%d_%H_%M_%S_%f")
             if src.lower().find('.gif') != -1:
                 original = str(original) + ".gif"
             else:
