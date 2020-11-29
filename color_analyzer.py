@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 from copy import deepcopy
-from skimage import color
 from colormath.color_objects import LabColor, sRGBColor
 from colormath.color_conversions import convert_color
 from sklearn.cluster import KMeans
@@ -132,7 +131,7 @@ def color_analyzer(original):
     for center in clt.cluster_centers_:
         lab = LabColor(center[0], center[1], center[2])
         rgb = convert_color(lab, sRGBColor, through_rgb_type=sRGBColor)
-        rgb = [int(rgb.rgb_r * 255), int(rgb.rgb_g * 255), int(rgb.rgb_b) * 255]
+        rgb = [int(rgb.rgb_r * 255), int(rgb.rgb_g * 255), int(rgb.rgb_b * 255)]
 
         center_hex = []
         for c in rgb:
@@ -140,8 +139,7 @@ def color_analyzer(original):
                 center_hex.append("0" + hex(int(c)))
             else:
                 center_hex.append(hex(int(c)))
-        center_hex = ''.join(center_hex)
-        center_hex = '#' + center_hex.replace("0x", "")
+        center_hex = '#' + ''.join(center_hex).replace("0x", "")
         result.append({'hex': center_hex, 'lab': center.tolist(), 'ratio': hist[i]})
         i += 1
 
