@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 from copy import deepcopy
+from skimage import color
+from colormath.color_objects import LabColor, sRGBColor
+from colormath.color_conversions import convert_color
+from sklearn.cluster import KMeans
 
 '''
 image: one-dimensional array which consists of 3-channel element
@@ -89,20 +93,57 @@ def custom_KMeans(image_pixels, cluster):
     return centroids_result
 
 
+def centroid_histogram(clt):
+    # grab the number of different clusters and create a histogram
+    # based on the number of pixels assigned to each cluster
+    num_labels = np.arange(0, len(np.unique(clt.labels_)) + 1)
+    (hist, _) = np.histogram(clt.labels_, bins=num_labels)
+
+    # normalize the histogram, such that it sums to one
+    hist = hist.astype("float")
+    hist /= hist.sum()
+
+    # return the histogram
+    return hist
+
+
 def color_analyzer(original):
     image = cv2.resize(original, dsize=(0, 0), fx=0.1, fy=0.1, interpolation=cv2.INTER_AREA)
     # cv2.imwrite('check1.png', image)    # BGRA Image
 
     # Reshape to one-dimensional RGB array adapting alpha channel
-    image_1d = []
+    lab_onedim = []
     for r in image:
         for c in r:
             if c[3] >= 1:
-                image_1d.append([c[2], c[1], c[0]])
-            
-    image_1d = np.array(image_1d)
+                rgb = sRGBColor(c[2], c[1], c[0], is_upscaled=True)
+                lab = convert_color(rgb, LabColor, through_rgb_type=sRGBColor)
+                lab_onedim.append([lab.lab_l, lab.lab_a, lab.lab_b])
 
-    result = custom_KMeans(image_1d, 3)
+    # start K-Means Clustering
+    clt = KMeans(n_clusters=3)
+    clt.fit(lab_onedim)
+
+    hist = centroid_histogram(clt)
+    hist = hist.tolist()
+
+    result = []
+    i = 0
+    for center in clt.cluster_centers_:
+        lab = LabColor(center[0], center[1], center[2])
+        rgb = convert_color(lab, sRGBColor, through_rgb_type=sRGBColor)
+        rgb = [int(rgb.rgb_r * 255), int(rgb.rgb_g * 255), int(rgb.rgb_b) * 255]
+
+        center_hex = []
+        for c in rgb:
+            if int(c) < 16:
+                center_hex.append("0" + hex(int(c)))
+            else:
+                center_hex.append(hex(int(c)))
+        center_hex = ''.join(center_hex)
+        center_hex = '#' + center_hex.replace("0x", "")
+        result.append({'hex': center_hex, 'lab': center.tolist(), 'ratio': hist[i]})
+        i += 1
 
     return result
 
