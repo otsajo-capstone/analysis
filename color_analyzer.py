@@ -142,4 +142,5 @@ def color_analyzer(original):
         result.append({'hex': center_hex, 'lab': center.tolist(), 'ratio': hist[i]})
         i += 1
 
+    result = sorted(result, key=lambda x: x['ratio'], reverse=True)
     return result
