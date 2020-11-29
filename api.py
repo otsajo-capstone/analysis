@@ -13,7 +13,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 dir_original = os.path.join(os.getcwd(), "original")
-server_address = "http://34.105.97.231:5000/"
+server_address = "http://34.82.241.230:5000/"
 
 
 @app.route('/', methods=['GET'])
