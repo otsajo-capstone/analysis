@@ -108,13 +108,12 @@ def centroid_histogram(clt):
 
 def color_analyzer(original):
     image = cv2.resize(original, dsize=(0, 0), fx=0.3, fy=0.3, interpolation=cv2.INTER_AREA)
-    # cv2.imwrite('check1.png', image)    # BGRA Image
 
     # Reshape to one-dimensional RGB array adapting alpha channel
     lab_onedim = []
     for r in image:
         for c in r:
-            if c[3] >= 1:
+            if c[3] >= 100:
                 rgb = sRGBColor(c[2], c[1], c[0], is_upscaled=True)
                 lab = convert_color(rgb, LabColor, through_rgb_type=sRGBColor)
                 lab_onedim.append([lab.lab_l, lab.lab_a, lab.lab_b])
@@ -144,36 +143,3 @@ def color_analyzer(original):
         i += 1
 
     return result
-
-
-'''
-    k = 3
-    clt = KMeans(n_clusters=k)
-    clt.fit(image)
-    
-    rep_colors = []
-
-    i = 0
-    for center in clt.cluster_centers_:
-        center_ = center.tolist()
-        center_hex = []
-        for c in center_:
-            if int(c) < 16:
-                center_hex.append("0" + hex(int(c)))
-            else:
-                center_hex.append(hex(int(c)))
-        center_hex = ''.join(center_hex)
-        center_hex = '#' + center_hex.replace("0x", "")
-        rep_colors.append({'hex': center_hex, 'ratio': hist[i]})
-        i += 1
-
-    hist = centroid_histogram(clt)
-    hist = hist.tolist()
-
-    bar = plot_colors(hist, clt.cluster_centers_)
-
-    plt.figure()
-    plt.axis("off")
-    plt.imshow(bar)
-    plt.show()
-'''
