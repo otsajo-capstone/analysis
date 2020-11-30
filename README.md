@@ -1,5 +1,5 @@
 # 이 저장소는...
-2020학년도 2학기 중앙대학교 소프트웨어학부 캡스톤디자인 OTSAJO 팀의 이미지 분석 파트의 코드와 API 문서를 포함하고 있습니다.
+2020학년도 2학기 중앙대학교 소프트웨어학부 캡스톤디자인 OTSAJO 팀 프로젝트의 이미지 분석 파트의 코드와 API 문서를 포함하고 있습니다.
 
 # 필요 모듈 설치
     pip install -r requirements.txt
@@ -16,7 +16,8 @@ or
 - scikit-learn
 - opencv-python
 - opencv-contrib-python
-- tensorflow=2.2.0
+- tensorflow==2.2.0
+- tensorflow-gpu==2.2.0
 - flask_cors
 
 # API
