@@ -1,75 +1,5 @@
 from palette import *
 
-def range_generator(str):
-    big_num = str[0]
-    rest_num = str[1:]
-    range = []
-
-    if big_num == '0':
-        range.append('000000')
-        range.append('4' + rest_num)
-    elif big_num == '1':
-        range.append('000000')
-        range.append('4' + rest_num)
-    elif big_num == '2':
-        range.append('0' + rest_num)
-        range.append('4' + rest_num)
-    elif big_num == '3':
-        range.append('1' + rest_num)
-        range.append('5' + rest_num)
-    elif big_num == '4':
-        range.append('2' + rest_num)
-        range.append('6' + rest_num)
-    elif big_num == '5':
-        range.append('3' + rest_num)
-        range.append('7' + rest_num)
-    elif big_num == '6':
-        range.append('4' + rest_num)
-        range.append('8' + rest_num)
-    elif big_num == '7':
-        range.append('5' + rest_num)
-        range.append('9' + rest_num)
-    elif big_num == '8':
-        range.append('6' + rest_num)
-        range.append('a' + rest_num)
-    elif big_num == '9':
-        range.append('7' + rest_num)
-        range.append('b' + rest_num)
-    elif big_num == 'a' or big_num == 'A':
-        range.append('8' + rest_num)
-        range.append('c' + rest_num)
-    elif big_num == 'b' or big_num == 'B':
-        range.append('9' + rest_num)
-        range.append('d' + rest_num)
-    elif big_num == 'c' or big_num == 'C':
-        range.append('a' + rest_num)
-        range.append('e' + rest_num)
-    elif big_num == 'd' or big_num == 'D':
-        range.append('b' + rest_num)
-        range.append('f' + rest_num)
-    elif big_num == 'e' or big_num == 'E':
-        range.append('b' + rest_num)
-        range.append('ffffff')
-    elif big_num == 'f' or big_num == 'F':
-        range.append('b' + rest_num)
-        range.append('ffffff')
-
-    return range
-
-
-def rgb_euclidean_distance(center, p_color):
-    center_r = int(center[0:2], 16)
-    center_g = int(center[2:4], 16)
-    center_b = int(center[4:6], 16)
-
-    p_color_r = int(p_color[0:2], 16)
-    p_color_g = int(p_color[2:4], 16)
-    p_color_b = int(p_color[4:6], 16)
-
-    return (center_r - p_color_r) ** 2 + \
-           (center_g - p_color_g) ** 2 + \
-           (center_b - p_color_b) ** 2
-
 
 def lab_euclidean_distance(center, p_color):
     return (center[0] - p_color[0]) ** 2 + \
@@ -82,7 +12,6 @@ def p_color_classifier(centroids_result):
 
     for centroid in centroids_result:
         lab = centroid['lab']
-        range = range_generator(lab)
         ratio = centroid['ratio']
 
         min_dist = 16777216
@@ -142,19 +71,3 @@ def p_color_classifier(centroids_result):
 
     return result
 
-'''
-print(p_color_classifier([
-    {
-        'hex': '#852f44',
-        'ratio': 0.1
-    },
-    {
-        'hex': '#852f45',
-        'ratio': 0.2
-    },
-    {
-        'hex': '#ffffff',
-        'ratio': 0.7
-    }
-]))
-'''

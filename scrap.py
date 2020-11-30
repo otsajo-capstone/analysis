@@ -2,9 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from selenium import webdriver
-from PIL import Image
 import os
-import time
+
 
 def scrap_by_bs(url, min_width, min_height):
     html = urlopen(url)
@@ -36,6 +35,7 @@ def scrap_by_bs(url, min_width, min_height):
             image_src.add(src)
 
     return image_src
+
 
 def scrap_by_selenium(url, min_width, min_height):
     chrome_options = webdriver.ChromeOptions()

@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
 import tensorflow as tf
-import sys
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 config = ConfigProto()
@@ -11,7 +10,8 @@ session = InteractiveSession(config=config)
 
 saved = load_model("save_ckp_frozen.h5")
 
-def readImage(path):
+
+def read_image(path):
     try:
         if (str(path).lower().find('.gif')) == -1:
             return cv2.imread(path)
@@ -25,6 +25,7 @@ def readImage(path):
         print(e)
         return None
 
+
 class fashion_tools(object):
     def __init__(self,imageid,model,version=1.1):
         self.imageid = imageid
@@ -35,7 +36,7 @@ class fashion_tools(object):
         """limited to top wear and full body dresses (wild and studio working)"""
         """takes input rgb----> return PNG"""
         name =  self.imageid
-        file = readImage(name)
+        file = read_image(name)
         file = tf.image.resize_with_pad(file,target_height=512,target_width=512)
         rgb  = file.numpy()
         file = np.expand_dims(file,axis=0)/ 255.
@@ -58,7 +59,7 @@ class fashion_tools(object):
         return None
 
 
-###running code
+# running code
 def cloth_recognizer(original):
     api = fashion_tools(original, saved)
     image_ = api.get_dress()
