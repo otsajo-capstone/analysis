@@ -52,10 +52,10 @@ def analyze_uploaded():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
-            result = p_color_classifier(colors)
+            result, colors = p_color_classifier(colors)
             external_path = server_address + 'image?filename=' + original
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors), 'result': result})
+            analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -117,11 +117,11 @@ def analyze_selected():
 
             cloth = cloth_recognizer(path)
             colors = color_analyzer(cloth)
-            result = p_color_classifier(colors)
+            result, colors = p_color_classifier(colors)
 
             external_path = server_address + 'image?filename=' + original
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': list(colors), 'result': result})
+            analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 

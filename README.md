@@ -60,8 +60,8 @@ or
         |:------:|:---:|:---:|
         |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
-        |colors|array({hex, lab, ratio})|색의 hex, lab값과 비율의 배열|
-        |result|array({type, subtype, ratio})|퍼스널 컬러 타입과 비율의 배열|
+        |colors|array({hex, ratio, type, subtype})|색의 hex값과 비율, 타입의 배열|
+        |result|array({ratio, type})|퍼스널 컬러 타입과 비율의 배열|
         <br />
 
 3. '/url', [POST]
@@ -105,7 +105,7 @@ or
         |:------:|:---:|:---:|
         |name|string|이미지 파일이름|
         |src|string|이미지의 소스 url|
-        |colors|array({hex, lab, ratio})|색의 hex, lab값과 비율의 배열|
-        |result|array({type, subtype, ratio})|퍼스널 컬러 타입과 비율의 배열|
+        |colors|array({hex, ratio, type, subtype})|색의 hex값과 비율, 타입의 배열|
+        |result|array({ratio, type})|퍼스널 컬러 타입과 비율의 배열|
         <br />
     

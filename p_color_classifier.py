@@ -9,6 +9,7 @@ def lab_euclidean_distance(center, p_color):
 
 def p_color_classifier(centroids_result):
     result = []
+    colors = []
 
     for centroid in centroids_result:
         lab = centroid['lab']
@@ -53,7 +54,7 @@ def p_color_classifier(centroids_result):
         duplicate_flag = 0
         i = 0
         for r in result:
-            if r['type'] == p_color_type and r['subtype'] == p_color_subtype:
+            if r['type'] == p_color_type:
                 duplicate_flag = 1
                 new_ratio = r['ratio'] + ratio
                 result[i]['ratio'] = new_ratio
@@ -64,10 +65,16 @@ def p_color_classifier(centroids_result):
             result.append({
                 "ratio": ratio,
                 "type": p_color_type,
-                "subtype": p_color_subtype
             })
+
+        colors.append({
+            "hex": centroid['hex'],
+            "ratio": ratio,
+            "type": p_color_type,
+            "subtype": p_color_subtype
+        })
 
     result = sorted(result, key=lambda x: x['ratio'], reverse=True)
 
-    return result
+    return result, colors
 
