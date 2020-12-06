@@ -49,7 +49,6 @@ def scrap_by_selenium(url, min_width, min_height):
     chrome = webdriver.Chrome(linux_path, chrome_options=chrome_options)
 
     chrome.get(url)
-    chrome.implicitly_wait(5)
     image_elements = chrome.find_elements_by_tag_name('img')
     image_src = set([])
     for e in image_elements:
