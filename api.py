@@ -18,7 +18,7 @@ server_address = "http://34.82.241.230:5000/"
 
 @app.route('/', methods=['GET'])
 def initial():
-    return "Analysis Server for Otsajo App!"
+    return "Analysis Server"
 
 
 @app.route('/image', methods=['GET'])
@@ -74,12 +74,10 @@ def scraper():
         if request.form['height']:
             min_height = int(request.form['height'])
 
-        result = scrap_by_bs(url, min_width, min_height)
-        if len(result) == 0:
-            result = scrap_by_selenium(url, min_width, min_height)
+        result = scrap_by_selenium(url, min_width, min_height)
 
-            if len(result) == 0:
-                return {'status': 'cannot scrap this site'}
+        if len(result) == 0:
+            return {'status': 'cannot scrap this site'}
 
         return {'status': 'success', 'src_list': list(result)}
 
