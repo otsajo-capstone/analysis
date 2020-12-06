@@ -113,7 +113,7 @@ def color_analyzer(original):
     lab_onedim = []
     for r in image:
         for c in r:
-            if c[3] >= 100:
+            if c[3] >= 200:
                 rgb = sRGBColor(c[2], c[1], c[0], is_upscaled=True)
                 lab = convert_color(rgb, LabColor, through_rgb_type=sRGBColor)
                 lab_onedim.append([lab.lab_l, lab.lab_a, lab.lab_b])
