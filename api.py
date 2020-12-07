@@ -58,7 +58,12 @@ def analyze_uploaded():
                 analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
 
             except Exception as e2:
-                analysis_result.append({'name': '오류-분석 실패', 'src': '', 'colors': [], 'result': []})
+                analysis_result.append({
+                    'name': '오류-분석 실패',
+                    'src': '',
+                    'colors': [{'hex': "#ffffff", 'ratio': 0, 'type': "", 'subtype': ""}],
+                    'result': [{'ratio': 0, 'type': ""}]
+                })
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -124,7 +129,12 @@ def analyze_selected():
                 analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
 
             except Exception as e2:
-                analysis_result.append({'name': '오류-분석 실패', 'src': '', 'colors': [], 'result': []})
+                analysis_result.append({
+                    'name': '오류-분석 실패',
+                    'src': '',
+                    'colors': [{'hex': "#ffffff", 'ratio': 0, 'type': "", 'subtype': ""}],
+                    'result': [{'ratio': 0, 'type': ""}]
+                })
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
