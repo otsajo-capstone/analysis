@@ -46,16 +46,19 @@ def analyze_uploaded():
             path = os.path.join(dir_original, original)
             file.save(path)
 
-            if file.content_type == 'image/gif':
-                img = Image.open(path)
-                img.save(path, 'png')
+            img = Image.open(path)
+            img.save(path, 'png')
 
-            cloth = cloth_recognizer(path)
-            colors = color_analyzer(cloth)
-            result, colors = p_color_classifier(colors)
-            external_path = server_address + 'image?filename=' + original
+            try:
+                cloth = cloth_recognizer(path)
+                colors = color_analyzer(cloth)
+                result, colors = p_color_classifier(colors)
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
+                external_path = server_address + 'image?filename=' + original
+                analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
+
+            except Exception as e2:
+                analysis_result.append({'name': '오류-분석 실패', 'src': '', 'colors': [], 'result': []})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
@@ -107,19 +110,21 @@ def analyze_selected():
                 src_okay = 'http:' + src_okay
             urllib.request.urlretrieve(src_okay, path)
 
-            if src.lower().find('.gif') != -1:
-                gif = Image.open(path)
-                original = original[:len(original)-4] + ".png"
-                path = path[:len(path)-4] + ".png"
-                gif.save(path, 'png')
+            odd = Image.open(path)
+            original = original[:len(original)-4] + ".png"
+            path = path[:len(path)-4] + ".png"
+            odd.save(path, 'png')
 
-            cloth = cloth_recognizer(path)
-            colors = color_analyzer(cloth)
-            result, colors = p_color_classifier(colors)
+            try:
+                cloth = cloth_recognizer(path)
+                colors = color_analyzer(cloth)
+                result, colors = p_color_classifier(colors)
 
-            external_path = server_address + 'image?filename=' + original
+                external_path = server_address + 'image?filename=' + original
+                analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
 
-            analysis_result.append({'name': original, 'src': external_path, 'colors': colors, 'result': result})
+            except Exception as e2:
+                analysis_result.append({'name': '오류-분석 실패', 'src': '', 'colors': [], 'result': []})
 
         return {'status': 'success', 'analysis_result': list(analysis_result)}
 
